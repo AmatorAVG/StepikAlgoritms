@@ -22,11 +22,14 @@ def merge_sort(l_ar, r_ar, inv_count):
     res = []
     l_ind = 0
     r_ind = 0
-    for i in range(len(l_ar) + len(r_ar)):
-        if r_ind == len(r_ar):
+    len_l_ar = len(l_ar)
+    len_r_ar = len(r_ar)
+
+    for i in range(len_l_ar + len_r_ar):
+        if r_ind == len_r_ar:
             res.append(l_ar[l_ind])
             l_ind += 1
-        elif l_ind == len(l_ar):
+        elif l_ind == len_l_ar:
             res.append(r_ar[r_ind])
             r_ind += 1
         elif l_ar[l_ind] < r_ar[r_ind]:
